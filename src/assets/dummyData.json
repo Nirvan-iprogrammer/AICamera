@@ -1,0 +1,553 @@
+{
+	"services": [
+		{
+			"id": 1,
+			"icon": "🔍",
+			"label": "Face Recognition gpu",
+			"Day": [
+				{
+					"userId": 21,
+					"name": "Day 1 ",
+					"Images": [
+						{
+							"description": "Lady with a Teddy",
+							"image": "https://images.pexels.com/photos/3348748/pexels-photo-3348748.jpeg"
+						},
+						{
+							"description": "Girl with camera",
+							"image": "https://images.pexels.com/photos/3812944/pexels-photo-3812944.jpeg"
+						},
+						{
+							"description": "Beautiful Girl with Glasses",
+							"image": "https://images.pexels.com/photos/2100063/pexels-photo-2100063.jpeg"
+						},
+						{
+							"description": "Redhead with frackles",
+							"image": "https://images.pexels.com/photos/3228213/pexels-photo-3228213.jpeg"
+						},
+						{
+							"description": "Girl in black dress",
+							"image": "https://images.pexels.com/photos/1385472/pexels-photo-1385472.jpeg"
+						},
+						{
+							"description": "Girl Sitting on Chair",
+							"image": "https://images.pexels.com/photos/4725133/pexels-photo-4725133.jpeg"
+						},
+						{
+							"description": "Lady with a Teddy",
+							"image": "https://images.pexels.com/photos/3348748/pexels-photo-3348748.jpeg"
+						},
+						{
+							"description": "Girl with camera",
+							"image": "https://images.pexels.com/photos/3812944/pexels-photo-3812944.jpeg"
+						},
+						{
+							"description": "Beautiful Girl with Glasses",
+							"image": "https://images.pexels.com/photos/2100063/pexels-photo-2100063.jpeg"
+						},
+						{
+							"description": "Redhead with frackles",
+							"image": "https://images.pexels.com/photos/3228213/pexels-photo-3228213.jpeg"
+						},
+						{
+							"description": "Girl in black dress",
+							"image": "https://images.pexels.com/photos/1385472/pexels-photo-1385472.jpeg"
+						},
+						{
+							"description": "Girl Sitting on Chair",
+							"image": "https://images.pexels.com/photos/4725133/pexels-photo-4725133.jpeg"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 2,
+			"icon": "🚨",
+			"label": "Intrusion Detection gpu",
+			"Day": [
+				{
+					"userId": 31,
+					"name": "Day 1 ",
+					"Images": [
+						{
+							"description": "Lady with a Teddy",
+							"image": "https://images.pexels.com/photos/3348748/pexels-photo-3348748.jpeg"
+						},
+						{
+							"description": "Girl with camera",
+							"image": "https://images.pexels.com/photos/3812944/pexels-photo-3812944.jpeg"
+						},
+						{
+							"description": "Beautiful Girl with Glasses",
+							"image": "https://images.pexels.com/photos/2100063/pexels-photo-2100063.jpeg"
+						},
+						{
+							"description": "Redhead with frackles",
+							"image": "https://images.pexels.com/photos/3228213/pexels-photo-3228213.jpeg"
+						},
+						{
+							"description": "Girl in black dress",
+							"image": "https://images.pexels.com/photos/1385472/pexels-photo-1385472.jpeg"
+						},
+						{
+							"description": "Girl Sitting on Chair",
+							"image": "https://images.pexels.com/photos/4725133/pexels-photo-4725133.jpeg"
+						},
+						{
+							"description": "Lady with a Teddy",
+							"image": "https://images.pexels.com/photos/3348748/pexels-photo-3348748.jpeg"
+						},
+						{
+							"description": "Girl with camera",
+							"image": "https://images.pexels.com/photos/3812944/pexels-photo-3812944.jpeg"
+						},
+						{
+							"description": "Beautiful Girl with Glasses",
+							"image": "https://images.pexels.com/photos/2100063/pexels-photo-2100063.jpeg"
+						},
+						{
+							"description": "Redhead with frackles",
+							"image": "https://images.pexels.com/photos/3228213/pexels-photo-3228213.jpeg"
+						},
+						{
+							"description": "Girl in black dress",
+							"image": "https://images.pexels.com/photos/1385472/pexels-photo-1385472.jpeg"
+						},
+						{
+							"description": "Girl Sitting on Chair",
+							"image": "https://images.pexels.com/photos/4725133/pexels-photo-4725133.jpeg"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 3,
+			"icon": "👥",
+			"label": "People Count gpu",
+			"Day": [
+				{
+					"userId": 41,
+					"name": "Day 1 ",
+					"Images": [
+						{
+							"description": "Lady with a Teddy",
+							"image": "https://images.pexels.com/photos/3348748/pexels-photo-3348748.jpeg"
+						},
+						{
+							"description": "Girl with camera",
+							"image": "https://images.pexels.com/photos/3812944/pexels-photo-3812944.jpeg"
+						},
+						{
+							"description": "Beautiful Girl with Glasses",
+							"image": "https://images.pexels.com/photos/2100063/pexels-photo-2100063.jpeg"
+						},
+						{
+							"description": "Redhead with frackles",
+							"image": "https://images.pexels.com/photos/3228213/pexels-photo-3228213.jpeg"
+						},
+						{
+							"description": "Girl in black dress",
+							"image": "https://images.pexels.com/photos/1385472/pexels-photo-1385472.jpeg"
+						},
+						{
+							"description": "Girl Sitting on Chair",
+							"image": "https://images.pexels.com/photos/4725133/pexels-photo-4725133.jpeg"
+						},
+						{
+							"description": "Lady with a Teddy",
+							"image": "https://images.pexels.com/photos/3348748/pexels-photo-3348748.jpeg"
+						},
+						{
+							"description": "Girl with camera",
+							"image": "https://images.pexels.com/photos/3812944/pexels-photo-3812944.jpeg"
+						},
+						{
+							"description": "Beautiful Girl with Glasses",
+							"image": "https://images.pexels.com/photos/2100063/pexels-photo-2100063.jpeg"
+						},
+						{
+							"description": "Redhead with frackles",
+							"image": "https://images.pexels.com/photos/3228213/pexels-photo-3228213.jpeg"
+						},
+						{
+							"description": "Girl in black dress",
+							"image": "https://images.pexels.com/photos/1385472/pexels-photo-1385472.jpeg"
+						},
+						{
+							"description": "Girl Sitting on Chair",
+							"image": "https://images.pexels.com/photos/4725133/pexels-photo-4725133.jpeg"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 4,
+			"icon": "🦺",
+			"label": "PPE Kit Detection 4 classes gpu",
+			"Day": [
+				{
+					"userId": 51,
+					"name": "Day 1 ",
+					"Images": [
+						{
+							"description": "Lady with a Teddy",
+							"image": "https://images.pexels.com/photos/3348748/pexels-photo-3348748.jpeg"
+						},
+						{
+							"description": "Girl with camera",
+							"image": "https://images.pexels.com/photos/3812944/pexels-photo-3812944.jpeg"
+						},
+						{
+							"description": "Beautiful Girl with Glasses",
+							"image": "https://images.pexels.com/photos/2100063/pexels-photo-2100063.jpeg"
+						},
+						{
+							"description": "Redhead with frackles",
+							"image": "https://images.pexels.com/photos/3228213/pexels-photo-3228213.jpeg"
+						},
+						{
+							"description": "Girl in black dress",
+							"image": "https://images.pexels.com/photos/1385472/pexels-photo-1385472.jpeg"
+						},
+						{
+							"description": "Girl Sitting on Chair",
+							"image": "https://images.pexels.com/photos/4725133/pexels-photo-4725133.jpeg"
+						},
+						{
+							"description": "Lady with a Teddy",
+							"image": "https://images.pexels.com/photos/3348748/pexels-photo-3348748.jpeg"
+						},
+						{
+							"description": "Girl with camera",
+							"image": "https://images.pexels.com/photos/3812944/pexels-photo-3812944.jpeg"
+						},
+						{
+							"description": "Beautiful Girl with Glasses",
+							"image": "https://images.pexels.com/photos/2100063/pexels-photo-2100063.jpeg"
+						},
+						{
+							"description": "Redhead with frackles",
+							"image": "https://images.pexels.com/photos/3228213/pexels-photo-3228213.jpeg"
+						},
+						{
+							"description": "Girl in black dress",
+							"image": "https://images.pexels.com/photos/1385472/pexels-photo-1385472.jpeg"
+						},
+						{
+							"description": "Girl Sitting on Chair",
+							"image": "https://images.pexels.com/photos/4725133/pexels-photo-4725133.jpeg"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 5,
+			"icon": "⛑️",
+			"label": "PPE Kit helmet Detection gpu",
+			"Day": [
+				{
+					"userId": 51,
+					"name": "Day 1 ",
+					"Images": [
+						{
+							"description": "Lady with a Teddy",
+							"image": "https://images.pexels.com/photos/3348748/pexels-photo-3348748.jpeg"
+						},
+						{
+							"description": "Girl with camera",
+							"image": "https://images.pexels.com/photos/3812944/pexels-photo-3812944.jpeg"
+						},
+						{
+							"description": "Beautiful Girl with Glasses",
+							"image": "https://images.pexels.com/photos/2100063/pexels-photo-2100063.jpeg"
+						},
+						{
+							"description": "Redhead with frackles",
+							"image": "https://images.pexels.com/photos/3228213/pexels-photo-3228213.jpeg"
+						},
+						{
+							"description": "Girl in black dress",
+							"image": "https://images.pexels.com/photos/1385472/pexels-photo-1385472.jpeg"
+						},
+						{
+							"description": "Girl Sitting on Chair",
+							"image": "https://images.pexels.com/photos/4725133/pexels-photo-4725133.jpeg"
+						},
+						{
+							"description": "Lady with a Teddy",
+							"image": "https://images.pexels.com/photos/3348748/pexels-photo-3348748.jpeg"
+						},
+						{
+							"description": "Girl with camera",
+							"image": "https://images.pexels.com/photos/3812944/pexels-photo-3812944.jpeg"
+						},
+						{
+							"description": "Beautiful Girl with Glasses",
+							"image": "https://images.pexels.com/photos/2100063/pexels-photo-2100063.jpeg"
+						},
+						{
+							"description": "Redhead with frackles",
+							"image": "https://images.pexels.com/photos/3228213/pexels-photo-3228213.jpeg"
+						},
+						{
+							"description": "Girl in black dress",
+							"image": "https://images.pexels.com/photos/1385472/pexels-photo-1385472.jpeg"
+						},
+						{
+							"description": "Girl Sitting on Chair",
+							"image": "https://images.pexels.com/photos/4725133/pexels-photo-4725133.jpeg"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 6,
+			"icon": "📷",
+			"label": "Camera Tampering",
+			"Day": [
+				{
+					"userId": 61,
+					"name": "Day 1 ",
+					"Images": [
+						{
+							"description": "Lady with a Teddy",
+							"image": "https://images.pexels.com/photos/3348748/pexels-photo-3348748.jpeg"
+						},
+						{
+							"description": "Girl with camera",
+							"image": "https://images.pexels.com/photos/3812944/pexels-photo-3812944.jpeg"
+						},
+						{
+							"description": "Beautiful Girl with Glasses",
+							"image": "https://images.pexels.com/photos/2100063/pexels-photo-2100063.jpeg"
+						},
+						{
+							"description": "Redhead with frackles",
+							"image": "https://images.pexels.com/photos/3228213/pexels-photo-3228213.jpeg"
+						},
+						{
+							"description": "Girl in black dress",
+							"image": "https://images.pexels.com/photos/1385472/pexels-photo-1385472.jpeg"
+						},
+						{
+							"description": "Girl Sitting on Chair",
+							"image": "https://images.pexels.com/photos/4725133/pexels-photo-4725133.jpeg"
+						},
+						{
+							"description": "Lady with a Teddy",
+							"image": "https://images.pexels.com/photos/3348748/pexels-photo-3348748.jpeg"
+						},
+						{
+							"description": "Girl with camera",
+							"image": "https://images.pexels.com/photos/3812944/pexels-photo-3812944.jpeg"
+						},
+						{
+							"description": "Beautiful Girl with Glasses",
+							"image": "https://images.pexels.com/photos/2100063/pexels-photo-2100063.jpeg"
+						},
+						{
+							"description": "Redhead with frackles",
+							"image": "https://images.pexels.com/photos/3228213/pexels-photo-3228213.jpeg"
+						},
+						{
+							"description": "Girl in black dress",
+							"image": "https://images.pexels.com/photos/1385472/pexels-photo-1385472.jpeg"
+						},
+						{
+							"description": "Girl Sitting on Chair",
+							"image": "https://images.pexels.com/photos/4725133/pexels-photo-4725133.jpeg"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 7,
+			"icon": "🚗",
+			"label": "Vehicle type detection gpu",
+			"Day": [
+				{
+					"userId": 72,
+					"name": "Day 1 ",
+					"Images": [
+						{
+							"description": "Lady with a Teddy",
+							"image": "https://images.pexels.com/photos/3348748/pexels-photo-3348748.jpeg"
+						},
+						{
+							"description": "Girl with camera",
+							"image": "https://images.pexels.com/photos/3812944/pexels-photo-3812944.jpeg"
+						},
+						{
+							"description": "Beautiful Girl with Glasses",
+							"image": "https://images.pexels.com/photos/2100063/pexels-photo-2100063.jpeg"
+						},
+						{
+							"description": "Redhead with frackles",
+							"image": "https://images.pexels.com/photos/3228213/pexels-photo-3228213.jpeg"
+						},
+						{
+							"description": "Girl in black dress",
+							"image": "https://images.pexels.com/photos/1385472/pexels-photo-1385472.jpeg"
+						},
+						{
+							"description": "Girl Sitting on Chair",
+							"image": "https://images.pexels.com/photos/4725133/pexels-photo-4725133.jpeg"
+						},
+						{
+							"description": "Lady with a Teddy",
+							"image": "https://images.pexels.com/photos/3348748/pexels-photo-3348748.jpeg"
+						},
+						{
+							"description": "Girl with camera",
+							"image": "https://images.pexels.com/photos/3812944/pexels-photo-3812944.jpeg"
+						},
+						{
+							"description": "Beautiful Girl with Glasses",
+							"image": "https://images.pexels.com/photos/2100063/pexels-photo-2100063.jpeg"
+						},
+						{
+							"description": "Redhead with frackles",
+							"image": "https://images.pexels.com/photos/3228213/pexels-photo-3228213.jpeg"
+						},
+						{
+							"description": "Girl in black dress",
+							"image": "https://images.pexels.com/photos/1385472/pexels-photo-1385472.jpeg"
+						},
+						{
+							"description": "Girl Sitting on Chair",
+							"image": "https://images.pexels.com/photos/4725133/pexels-photo-4725133.jpeg"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 8,
+			"icon": "🚪",
+			"label": "Entry Exit Detection gpu",
+			"Day": [
+				{
+					"userId": 21,
+					"name": "Day 1 ",
+					"Images": [
+						{
+							"description": "Lady with a Teddy",
+							"image": "https://images.pexels.com/photos/3348748/pexels-photo-3348748.jpeg"
+						},
+						{
+							"description": "Girl with camera",
+							"image": "https://images.pexels.com/photos/3812944/pexels-photo-3812944.jpeg"
+						},
+						{
+							"description": "Beautiful Girl with Glasses",
+							"image": "https://images.pexels.com/photos/2100063/pexels-photo-2100063.jpeg"
+						},
+						{
+							"description": "Redhead with frackles",
+							"image": "https://images.pexels.com/photos/3228213/pexels-photo-3228213.jpeg"
+						},
+						{
+							"description": "Girl in black dress",
+							"image": "https://images.pexels.com/photos/1385472/pexels-photo-1385472.jpeg"
+						},
+						{
+							"description": "Girl Sitting on Chair",
+							"image": "https://images.pexels.com/photos/4725133/pexels-photo-4725133.jpeg"
+						},
+						{
+							"description": "Lady with a Teddy",
+							"image": "https://images.pexels.com/photos/3348748/pexels-photo-3348748.jpeg"
+						},
+						{
+							"description": "Girl with camera",
+							"image": "https://images.pexels.com/photos/3812944/pexels-photo-3812944.jpeg"
+						},
+						{
+							"description": "Beautiful Girl with Glasses",
+							"image": "https://images.pexels.com/photos/2100063/pexels-photo-2100063.jpeg"
+						},
+						{
+							"description": "Redhead with frackles",
+							"image": "https://images.pexels.com/photos/3228213/pexels-photo-3228213.jpeg"
+						},
+						{
+							"description": "Girl in black dress",
+							"image": "https://images.pexels.com/photos/1385472/pexels-photo-1385472.jpeg"
+						},
+						{
+							"description": "Girl Sitting on Chair",
+							"image": "https://images.pexels.com/photos/4725133/pexels-photo-4725133.jpeg"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 9,
+			"icon": "🚘",
+			"label": "Automatic Number Plate Detection gpu",
+			"Day": [
+				{
+					"userId": 91,
+					"name": "Day 1 ",
+					"Images": [
+						{
+							"description": "Lady with a Teddy",
+							"image": "https://images.pexels.com/photos/3348748/pexels-photo-3348748.jpeg"
+						},
+						{
+							"description": "Girl with camera",
+							"image": "https://images.pexels.com/photos/3812944/pexels-photo-3812944.jpeg"
+						},
+						{
+							"description": "Beautiful Girl with Glasses",
+							"image": "https://images.pexels.com/photos/2100063/pexels-photo-2100063.jpeg"
+						},
+						{
+							"description": "Redhead with frackles",
+							"image": "https://images.pexels.com/photos/3228213/pexels-photo-3228213.jpeg"
+						},
+						{
+							"description": "Girl in black dress",
+							"image": "https://images.pexels.com/photos/1385472/pexels-photo-1385472.jpeg"
+						},
+						{
+							"description": "Girl Sitting on Chair",
+							"image": "https://images.pexels.com/photos/4725133/pexels-photo-4725133.jpeg"
+						},
+						{
+							"description": "Lady with a Teddy",
+							"image": "https://images.pexels.com/photos/3348748/pexels-photo-3348748.jpeg"
+						},
+						{
+							"description": "Girl with camera",
+							"image": "https://images.pexels.com/photos/3812944/pexels-photo-3812944.jpeg"
+						},
+						{
+							"description": "Beautiful Girl with Glasses",
+							"image": "https://images.pexels.com/photos/2100063/pexels-photo-2100063.jpeg"
+						},
+						{
+							"description": "Redhead with frackles",
+							"image": "https://images.pexels.com/photos/3228213/pexels-photo-3228213.jpeg"
+						},
+						{
+							"description": "Girl in black dress",
+							"image": "https://images.pexels.com/photos/1385472/pexels-photo-1385472.jpeg"
+						},
+						{
+							"description": "Girl Sitting on Chair",
+							"image": "https://images.pexels.com/photos/4725133/pexels-photo-4725133.jpeg"
+						}
+					]
+				}
+			]
+		}
+	]
+}
