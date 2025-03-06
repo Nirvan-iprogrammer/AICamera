@@ -6,6 +6,10 @@ import Events from './Components/Events'
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
 import { Link } from "react-router-dom";
 import LiveCam from './Components/LiveCam'
+import {Attendance} from './Components/Attendance'
+import {FireEvent} from './Components/FireEvent'
+import {Intrusion} from './Components/Intrusion'
+import Analytics from './Components/Analytics'
 
 
 function App() {
@@ -38,12 +42,27 @@ function App() {
           element: <ServiceCam />
         },
         {
+          path: "/services/attendence",
+          element: <Attendance />
+        },
+        {
+          path: "/services/fireEvent",
+          element: <FireEvent />
+        },
+        {
+          path: "/services/intrusion",
+          element: <Intrusion />
+        },
+        {
           path: "/event",
           element: <Events />
         },
         {
           path: "/setting",
           element: <Settings />,
+        },{
+          path:"/analytic",
+          element:<Analytics />
         }
       ]
 

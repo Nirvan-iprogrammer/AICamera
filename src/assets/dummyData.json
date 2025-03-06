@@ -4,6 +4,7 @@
 			"id": 1,
 			"icon": "🔍",
 			"label": "Face Recognition gpu",
+			"name":"crowd",
 			"Day": [
 				{
 					"userId": 21,
@@ -65,6 +66,7 @@
 			"id": 2,
 			"icon": "🚨",
 			"label": "Intrusion Detection gpu",
+			"name":"crowd",
 			"Day": [
 				{
 					"userId": 31,
@@ -126,6 +128,7 @@
 			"id": 3,
 			"icon": "👥",
 			"label": "People Count gpu",
+			"name":"crowd",
 			"Day": [
 				{
 					"userId": 41,
@@ -187,6 +190,7 @@
 			"id": 4,
 			"icon": "🦺",
 			"label": "PPE Kit Detection 4 classes gpu",
+			"name":"crowd",
 			"Day": [
 				{
 					"userId": 51,
@@ -248,6 +252,7 @@
 			"id": 5,
 			"icon": "⛑️",
 			"label": "PPE Kit helmet Detection gpu",
+			"name":"crowd",
 			"Day": [
 				{
 					"userId": 51,
@@ -370,6 +375,7 @@
 			"id": 7,
 			"icon": "🚗",
 			"label": "Vehicle type detection gpu",
+			"name":"crowd",
 			"Day": [
 				{
 					"userId": 72,
@@ -431,6 +437,7 @@
 			"id": 8,
 			"icon": "🚪",
 			"label": "Entry Exit Detection gpu",
+			"name":"crowd",
 			"Day": [
 				{
 					"userId": 21,
@@ -492,6 +499,7 @@
 			"id": 9,
 			"icon": "🚘",
 			"label": "Automatic Number Plate Detection gpu",
+			"name":"crowd",
 			"Day": [
 				{
 					"userId": 91,

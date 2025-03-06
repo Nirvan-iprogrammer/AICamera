@@ -65,8 +65,8 @@ const Events = () => {
         <tbody>
           {displayItems.map((item, index) => (
             <tr key={index} className="odd:bg-gray-100 even:bg-white">
-              <td className="p-3">{item.description}</td>
-              <td className="p-3">{item.name}</td>
+              <td className="p-3">{item.camera_name}</td>
+              <td className="p-3">{item.image_name}</td>
               <td className="p-3">"testing"</td>
               <td className="p-3">"testing"</td>
               <td className="p-3">"testing"</td>
