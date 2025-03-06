@@ -6,22 +6,37 @@ import Events from './Components/Events'
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
 import { Link } from "react-router-dom";
 import LiveCam from './Components/LiveCam'
-import {Attendance} from './Components/Attendance'
-import {FireEvent} from './Components/FireEvent'
-import {Intrusion} from './Components/Intrusion'
+import  Attendance  from './Components/Attendance'
+import FireEvent from './Components/FireEvent'
+import Intrusion from './Components/Intrusion'
 import Analytics from './Components/Analytics'
+import { FiSettings } from "react-icons/fi";
+
+// Header Component
+const Header = () => {
+  return (
+    <div className="flex justify-end p-4 bg-white text-black ">
+      <Link to="/setting" className="hover:underline">
+        <FiSettings size={32} />
+      </Link>
+    </div>
+  );
+};
+
 
 
 function App() {
-  const [count, setCount] = useState(0)
 
   const AppLayout = () => {
     return (
-      
       <>
-        <SideNavBar />
-        <div className="ml-[20px] p-[20px] h-full">
-          <Outlet />
+       
+        <div className="flex h-full">
+          <SideNavBar />
+          <div className="ml-[20px] p-[20px] w-full">
+          <Header />
+            <Outlet />
+          </div>
         </div>
       </>
     )
@@ -60,9 +75,9 @@ function App() {
         {
           path: "/setting",
           element: <Settings />,
-        },{
-          path:"/analytic",
-          element:<Analytics />
+        }, {
+          path: "/analytic",
+          element: <Analytics />
         }
       ]
 

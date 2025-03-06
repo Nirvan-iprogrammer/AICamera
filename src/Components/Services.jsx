@@ -4,7 +4,7 @@ import data from "../assets/dummyData.json"
 import { useDispatch } from 'react-redux';
 import { setItemEvent , setItemSetting} from '../utils/userSlice';
 import { useNavigate } from 'react-router-dom';
-import axios from "axios";
+
 
 
 export const ServiceCam = () => {
@@ -116,15 +116,10 @@ export const ServiceCam = () => {
       className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
     />
   </div>
-
-  
- 
     <div className="mt-8 text-center">
       <p className="mb-4 text-gray-600">No Users Found! Add Users to start building the User List.</p>
       <button className="px-4 py-2 text-white bg-green-600 rounded-lg hover:bg-green-700">+ Add User</button>
     </div>
-
-
 </div>
 
      
