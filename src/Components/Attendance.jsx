@@ -75,27 +75,26 @@ const Attendance = () => {
         />
       </div>
 
+
       <table className="w-full border-collapse">
         <thead>
           <tr className="bg-gray-800 text-white">
-            <th className="p-3 text-left">User ID</th>
-            <th className="p-3 text-left">User Name</th>
-            <th className="p-3 text-left">User Type</th>
-            <th className="p-3 text-left">Department</th>
-            <th className="p-3 text-left">Camera</th>
-            <th className="p-3 text-left">Valid Till</th>
+            <th className="p-3 text-left">Camera ID</th>
+            <th className="p-3 text-left">Service Name</th>
+            <th className="p-3 text-left">Image</th>
+            <th className="p-3 text-left">Camera Name</th>
+            <th className="p-3 text-left">Created</th>
             <th className="p-3 text-left">Action</th>
           </tr>
         </thead>
         <tbody>
           {displayItems.map((item, index) => (
             <tr key={index} className="odd:bg-gray-100 even:bg-white">
-              <td className="p-3">{item.camera_name}</td>
+              <td className="p-3">{item.id}</td>
+              <td className="p-3">{item.service_name}</td>
               <td className="p-3">{item.image_name}</td>
-              <td className="p-3">"testing"</td>
-              <td className="p-3">"testing"</td>
-              <td className="p-3">"testing"</td>
-              <td className="p-3">"testing"</td>
+              <td className="p-3">{item.camera_name}</td>
+              <td className="p-3">{item.created_at}</td>
               <td className="p-3">
                 <button
                   onClick={() => showDetails(item)}
