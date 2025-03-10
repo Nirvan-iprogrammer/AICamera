@@ -66,16 +66,17 @@ const Analytics = () => {
   };
 
   return (
-    <div className="flex flex-col p-6">
-      <h1 className="text-3xl font-bold text-black mb-8">Service Date Form</h1>
-      <form onSubmit={handleSubmit} className="flex w-full flex-col">
-        <div className="flex items-center gap-4">
-          <div className='mx-2 w-4xl'>
+    <div className="w-full p-4">
+      <h1 className="text-3xl font-bold text-black mb-4">Event Data</h1>
+      <form onSubmit={handleSubmit}>
+        <div className="items-center gap-4">
+          <div className='flex'>
+          <div className='mx-2 w-[33%]'>
             <label className="block text-black mb-2">Service Name:</label>
             <select
               value={serviceName}
               onChange={(e) => setServiceName(e.target.value)}
-              className="w-1/2 p-3 rounded-lg border  focus:outline focus:outline-blue-500 focus:ring-2 focus:ring-blue-500"
+              className="w-full p-3 rounded-lg border  focus:outline focus:outline-blue-500 focus:ring-2 focus:ring-blue-500"
               required
             >
               <option value="">Select Service</option>
@@ -84,31 +85,31 @@ const Analytics = () => {
             </select>
           </div>
 
-          <div className='mx-2 w-4xl'>
+          <div className='mx-2 w-[33%]'>
             <label className="block text-black mb-2">Start Date:</label>
             <input
               type="date"
               value={startDate}
               onChange={handleStartDateChange}
               max={new Date().toISOString().split('T')[0]}
-              className="p-2 border rounded-lg w-1/2"
+              className="p-2 border rounded-lg w-full"
               required
             />
           </div>
 
-          <div className='mx-2 w-4xl'>
+          <div className='mx-2 w-[33%]'>
             <label className="block text-black mb-2">End Date:</label>
             <input
               type="date"
               value={endDate}
               onChange={handleEndDateChange}
               min={startDate}
-              className="p-2 border rounded-lg w-1/2"
+              className="p-2 border rounded-lg w-full"
               required
             />
           </div>
 
-        </div>
+        </div></div>
 
         {error && <p className="text-red-500">{error}</p>}
 
@@ -120,6 +121,7 @@ const Analytics = () => {
         </button>
       </form>
     </div>
+  
   );
 };
 

@@ -20,7 +20,7 @@ const SideNavBar = () => {
   };
 
   return (
-    <div className={`relative items-center top-0 left-0 ${isCollapsed ? 'w-[80px]' : 'w-[200px]'} h-full bg-gray-800 text-white transition-all duration-300 shadow-lg`}>
+    <div className={`relative items-center top-0 left-0 ${isCollapsed ? 'w-[80px]' : 'w-[300px]'} h-full bg-gray-800 text-white transition-all duration-300 shadow-lg`}>
       <button
         onClick={toggleSidebar}
         className="absolute top-3 right-7 text-white text-2xl focus:outline-none"
@@ -92,13 +92,14 @@ const SideNavBar = () => {
         >
           <Link
             to="/services/analytic"
-            className={`flex items-center space-x-4 text-white no-underline text-lg p-3 cursor-pointer transition-all duration-300 ${activeTab === "analytics" ? "text-blue-400 border-l-4 border-white bg-gray-900" : "hover:text-gray-400"
+           className={`flex items-center space-x-4 text-white no-underline text-lg p-3 cursor-pointer transition-all duration-300 ${activeTab === "analytics" ? "text-blue-400 border-l-4 border-white bg-gray-900" : "hover:text-gray-400"
               }`}
           >
             <MdAnalytics />
             {!isCollapsed && <span>Analytic</span>}
           </Link>
         </li>
+      
       </ul>
     </div>
   );
