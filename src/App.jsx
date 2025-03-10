@@ -11,17 +11,7 @@ import FireEvent from './Components/FireEvent'
 import Intrusion from './Components/Intrusion'
 import Analytics from './Components/Analytics'
 import { FiSettings } from "react-icons/fi";
-
-// Header Component
-const Header = () => {
-  return (
-    <div className="flex justify-end p-4 bg-white text-black ">
-      <Link to="/setting" className="hover:underline">
-        <FiSettings size={32} />
-      </Link>
-    </div>
-  );
-};
+import Header from './Components/header'
 
 
 
@@ -76,7 +66,7 @@ function App() {
           path: "/setting",
           element: <Settings />,
         }, {
-          path: "/analytic",
+          path: "/services/analytic",
           element: <Analytics />
         }
       ]

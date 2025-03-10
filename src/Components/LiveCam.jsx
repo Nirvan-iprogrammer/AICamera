@@ -1,58 +1,9 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { setItemEvent ,setItemSetting } from '../utils/userSlice';
+import { setItemEvent, setItemSetting } from '../utils/userSlice';
 import LiveStream from './LiveStream';
 
-// Table Component
-const TableComponent = ({ dataToDisplay }) => {
-  return (
-    <div className="w-full p-4">
-      <div className="mb-4">
-        <input
-          type="text"
-          placeholder="Search"
-          className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-        />
-      </div>
 
-      <div className="overflow-x-auto">
-        <table className="w-full border-collapse">
-          <thead>
-            <tr className="bg-gray-800 text-white">
-              <th className="p-3 text-left">User ID</th>
-              <th className="p-3 text-left">User Name</th>
-              <th className="p-3 text-left">User Type</th>
-              <th className="p-3 text-left">Department</th>
-              <th className="p-3 text-left">Camera</th>
-              <th className="p-3 text-left">Valid Till</th>
-              <th className="p-3 text-left">Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            {dataToDisplay.map((item, index) => (
-              <tr key={index} className="odd:bg-gray-100 even:bg-white">
-                <td className="p-3">{item.camera_name}</td>
-                <td className="p-3">{item.image_name}</td>
-                <td className="p-3">Testing</td>
-                <td className="p-3">Testing</td>
-                <td className="p-3">Testing</td>
-                <td className="p-3">Testing</td>
-                <td className="p-3">
-                  <button
-                    onClick={() => alert(`Details for ${item.camera_name}`)}
-                    className="px-4 py-2 text-white bg-blue-600 rounded-lg hover:bg-blue-700"
-                  >
-                    Details
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </div>
-  );
-};
 
 // Main LiveCam Component
 function LiveCam({ onCapture }) {
@@ -105,36 +56,22 @@ function LiveCam({ onCapture }) {
   };
 
   return (
-    <div className="h-screen flex flex-col">
-      {/* Start Camera Button */}
-      {/* {!isCameraStarted && (
-        <button
-          onClick={startCamera}
-          className="self-center mt-4 px-6 py-3 text-white bg-green-600 rounded-lg hover:bg-green-700"
-        >
-          Start Camera
-        </button>
-      )} */}
+    <div className="flex flex-col">
 
       {/* Camera Feeds */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 h-1/2">
-      <div className="relative w-full h-full border border-gray-300 rounded-lg overflow-hidden flex items-center justify-center">
-  <LiveStream />
-</div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
+        <div className="relative w-full h-full border border-gray-300 rounded-lg overflow-hidden flex items-center justify-center">
+          <LiveStream />
+        </div>
 
         {videoRefs.map((videoRef, index) => (
           <div key={index} className="relative w-full h-full border border-gray-300 rounded-lg overflow-hidden">
             <video ref={videoRef} autoPlay className="w-full h-full object-cover" />
           </div>
         ))}
-         
+
 
       </div>
-
-      {/* Table Section */}
-      {/* <div className="h-1/2 overflow-auto">
-        <TableComponent dataToDisplay={tableData} />
-      </div> */}
     </div>
   );
 }

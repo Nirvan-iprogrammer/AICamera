@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import Modal from './Modal';
-import { setItemSetting , setItemEvent} from '../utils/userSlice';
+import { setItemSetting, setItemEvent } from '../utils/userSlice';
 import { useDispatch } from 'react-redux';
+import LiveCam from './LiveCam';
 
-const Intrusion  = () => {
+const Intrusion = () => {
   const [page, setPage] = useState(1);
   const [noPerPage] = useState(5);
   const [isOpen, setIsOpen] = useState(false);
@@ -13,24 +14,23 @@ const Intrusion  = () => {
 
 
   const dispatch = useDispatch();
-  
 
 
   // Fetch Data from API
-    useEffect(() => {
-      const fetchData = async () => {
-        try {
-          const response = await fetch('http://192.168.151.19:5017/services/intrusion');
-          const json = await response.json();
-          dispatch(setItemEvent(json.events));
-          dispatch(setItemSetting(json.settings));
-          setIntrusion(json.events)
-        } catch (error) {
-          console.error('Error fetching data:', error);
-        }
-      };
-      fetchData();
-    }, []);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://192.168.151.19:5017/services/intrusion');
+        const json = await response.json();
+        dispatch(setItemEvent(json.events));
+        dispatch(setItemSetting(json.settings));
+        setIntrusion(json.events)
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+    fetchData();
+  }, []);
 
   const cartItem = useSelector((store) => store.service.items);
 
@@ -56,7 +56,8 @@ const Intrusion  = () => {
 
   return (
     <div className="w-full p-4">
-  <Modal open={isOpen} onClose={() => setIsOpen(false)}>
+      <LiveCam />
+      <Modal open={isOpen} onClose={() => setIsOpen(false)}>
         <div className="p-4 bg-white rounded-2xl shadow-xl max-w-lg">
           <img
             className="w-full h-52 object-cover rounded-xl"
@@ -77,7 +78,7 @@ const Intrusion  = () => {
       <table className="w-full border-collapse">
         <thead>
           <tr className="bg-gray-800 text-white">
-          <th className="p-3 text-left">Camera ID</th>
+            <th className="p-3 text-left">Camera ID</th>
             <th className="p-3 text-left">Service Name</th>
             <th className="p-3 text-left">Image</th>
             <th className="p-3 text-left">Camera Name</th>
@@ -146,6 +147,6 @@ const Intrusion  = () => {
   );
 };
 
-export default Intrusion ;
+export default Intrusion;
 
 

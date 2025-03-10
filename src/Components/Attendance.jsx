@@ -1,9 +1,11 @@
 
 import React, { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
 import Modal from './Modal';
-import { setItemSetting , setItemEvent} from '../utils/userSlice';
+import { setItemSetting, setItemEvent } from '../utils/userSlice';
 import { useDispatch } from 'react-redux';
+import LiveCam from './LiveCam';
+
+
 
 const Attendance = () => {
   const [page, setPage] = useState(1);
@@ -14,26 +16,26 @@ const Attendance = () => {
 
 
   const dispatch = useDispatch();
-  
+
 
 
   // Fetch Data from API
-    useEffect(() => {
-      const fetchData = async () => {
-        try {
-          const response = await fetch('http://192.168.151.19:5017/services/crowd');
-          const json = await response.json();
-          dispatch(setItemEvent(json.events));
-          dispatch(setItemSetting(json.settings));
-          setAttendence(json.events)
-        } catch (error) {
-          console.error('Error fetching data:', error);
-        }
-      };
-      fetchData();
-    }, []);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://192.168.151.19:5017/services/crowd');
+        const json = await response.json();
+        dispatch(setItemEvent(json.events));
+        dispatch(setItemSetting(json.settings));
+        setAttendence(json.events)
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+    fetchData();
+  }, []);
 
-  const cartItem = useSelector((store) => store.service.items);
+
 
   const noOfPage = Math.floor(attendence.length / noPerPage);
   const toDisplayPageNo = [...Array(noOfPage + 1).keys()].slice(1);
@@ -57,7 +59,8 @@ const Attendance = () => {
 
   return (
     <div className="w-full p-4">
-  <Modal open={isOpen} onClose={() => setIsOpen(false)}>
+      <LiveCam />
+      <Modal open={isOpen} onClose={() => setIsOpen(false)}>
         <div className="p-4 bg-white rounded-2xl shadow-xl max-w-lg">
           <img
             className="w-full h-52 object-cover rounded-xl"
@@ -110,8 +113,8 @@ const Attendance = () => {
 
       {displayItems.length === 0 && (
         <div className="mt-8 text-center">
-          <p className="mb-4 text-gray-600">No Users Found! Add Users to start building the User List.</p>
-          <button className="px-4 py-2 text-white bg-green-600 rounded-lg hover:bg-green-700">+ Add User</button>
+          <p className="mb-4 text-gray-600">Add Users to start building the User List.</p>
+          <button className="px-4 py-2 text-white bg-green-600 rounded-lg hover:bg-green-700">+ Add Event</button>
         </div>
       )}
 
