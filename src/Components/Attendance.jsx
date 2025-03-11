@@ -4,7 +4,8 @@ import Modal from './Modal';
 import { setItemSetting, setItemEvent } from '../utils/userSlice';
 import { useDispatch } from 'react-redux';
 import LiveCam from './LiveCam';
-
+import useFetch from '../hooks/fetch'
+import { crowdApi } from '../utils/Constants';
 
 
 const Attendance = () => {
@@ -18,12 +19,13 @@ const Attendance = () => {
   const dispatch = useDispatch();
 
 
+ 
 
   // Fetch Data from API
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://192.168.151.19:5017/services/crowd');
+        const response = await fetch(crowdApi);
         const json = await response.json();
         dispatch(setItemEvent(json.events));
         dispatch(setItemSetting(json.settings));

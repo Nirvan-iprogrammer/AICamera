@@ -4,6 +4,8 @@ import Modal from './Modal';
 import { setItemSetting, setItemEvent } from '../utils/userSlice';
 import { useDispatch } from 'react-redux';
 import LiveCam from './LiveCam';
+import { intrusionApi } from '../utils/Constants';
+
 
 const Intrusion = () => {
   const [page, setPage] = useState(1);
@@ -20,7 +22,7 @@ const Intrusion = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://192.168.151.19:5017/services/intrusion');
+        const response = await fetch(intrusionApi);
         const json = await response.json();
         dispatch(setItemEvent(json.events));
         dispatch(setItemSetting(json.settings));

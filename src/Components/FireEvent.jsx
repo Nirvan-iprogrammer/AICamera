@@ -4,6 +4,8 @@ import Modal from './Modal';
 import { setItemSetting, setItemEvent } from '../utils/userSlice';
 import { useDispatch } from 'react-redux';
 import LiveCam from './LiveCam';
+import { fireApi } from '../utils/Constants';
+
 
 const FireEvent = () => {
   const [page, setPage] = useState(1);
@@ -21,7 +23,7 @@ const FireEvent = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://192.168.151.19:5017/services/fire');
+        const response = await fetch(fireApi);
         const json = await response.json();
         dispatch(setItemEvent(json.events));
         dispatch(setItemSetting(json.settings));

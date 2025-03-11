@@ -7,7 +7,7 @@ const Settings = () => {
   const [formData, setFormData] = useState(settings[0]);
 
   //  fields disabled
-  const readOnlyFields = ['id'];
+  const readOnlyFields = ['id','created_at','service_name'];
 
   const handleChange = (key, value) => {
     setFormData((prevData) => ({
@@ -43,7 +43,7 @@ const Settings = () => {
        <div>
           <h1 className="text-3xl text-black font-bold mb-8">Settings</h1>
          <form onSubmit={handleSubmit} className="space-y-6 max-w-lg">
-           {Object.entries(formData).map(([key, value]) => (
+           {Object.entries(formData).filter(([key, value]) => !readOnlyFields.includes(key)).map(([key, value]) => (
              <div key={key}>
                <label className="block text-black mb-2">{key.replace('_', ' ').toUpperCase()}:</label>
                <input

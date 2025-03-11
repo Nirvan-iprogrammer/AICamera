@@ -5,6 +5,7 @@ const Analytics = () => {
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
   const [error, setError] = useState('');
+  const [analyticData, setAnalyticData] = useState([]);
 
   // Validate and set start date
   const handleStartDateChange = (e) => {
@@ -43,6 +44,7 @@ const Analytics = () => {
       const jsonRes = await res.json();
       console.log('jsonRes', jsonRes);
       // Dispatch your actions here
+      setAnalyticData(jsonRes);
     } catch (error) {
       console.error('API call error:', error);
     }
@@ -120,6 +122,9 @@ const Analytics = () => {
           Submit
         </button>
       </form>
+      {analyticData.length >0 && (
+       <div>{analyticData.map((item) => <h1>{item.total_count}</h1>)}</div>
+      )}
     </div>
   
   );
