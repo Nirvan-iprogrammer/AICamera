@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import Modal from './Modal';
+import Modal from '../Components/Modal';
 import { setItemSetting, setItemEvent } from '../utils/userSlice';
 import { useDispatch } from 'react-redux';
-import LiveCam from './LiveCam';
+import LiveCam from '../Components/LiveCam';
 import { intrusionApi } from '../utils/Constants';
 
 

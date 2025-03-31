@@ -1,21 +1,52 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import Modal from './Modal';
+import Modal from '../Components/Modal';
+import { setItemSetting, setItemEvent } from '../utils/userSlice';
+import { useDispatch } from 'react-redux';
+import LiveCam from '../Components/LiveCam';
+import { fireApi } from '../utils/Constants';
+import useFetch from "../hooks/fetch"
 
-const Events = () => {
+
+
+const FireEvent = () => {
   const [page, setPage] = useState(1);
   const [noPerPage] = useState(5);
   const [isOpen, setIsOpen] = useState(false);
   const [modalData, setModalData] = useState("");
+  const [fireEvents, setfireEvents] = useState([]);
+
+
+  const dispatch = useDispatch();
+
+const {data} = useFetch(fireApi)
+
+console.log("data", data)
+
+  // Fetch Data from API
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(fireApi);
+        const json = await response.json();
+        dispatch(setItemEvent(json.events));
+        dispatch(setItemSetting(json.settings));
+        setfireEvents(json.events)
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+    fetchData();
+  }, []);
 
   const cartItem = useSelector((store) => store.service.items);
 
-  const noOfPage = Math.floor(cartItem.length / noPerPage);
+  const noOfPage = Math.floor(fireEvents.length / noPerPage);
   const toDisplayPageNo = [...Array(noOfPage + 1).keys()].slice(1);
 
   const lastIndexPage = page * noPerPage;
   const firstIndexPage = lastIndexPage - noPerPage;
-  const displayItems = cartItem.slice(firstIndexPage, lastIndexPage);
+  const displayItems = fireEvents.slice(firstIndexPage, lastIndexPage);
 
   const paginationForward = () => {
     if (page < noOfPage) setPage((p) => p + 1);
@@ -32,7 +63,8 @@ const Events = () => {
 
   return (
     <div className="w-full p-4">
-  <Modal open={isOpen} onClose={() => setIsOpen(false)}>
+      <LiveCam />
+      <Modal open={isOpen} onClose={() => setIsOpen(false)}>
         <div className="p-4 bg-white rounded-2xl shadow-xl max-w-lg">
           <img
             className="w-full h-52 object-cover rounded-xl"
@@ -53,24 +85,22 @@ const Events = () => {
       <table className="w-full border-collapse">
         <thead>
           <tr className="bg-gray-800 text-white">
-            <th className="p-3 text-left">User ID</th>
-            <th className="p-3 text-left">User Name</th>
-            <th className="p-3 text-left">User Type</th>
-            <th className="p-3 text-left">Department</th>
-            <th className="p-3 text-left">Camera</th>
-            <th className="p-3 text-left">Valid Till</th>
+            <th className="p-3 text-left">Camera ID</th>
+            <th className="p-3 text-left">Service Name</th>
+            <th className="p-3 text-left">Image</th>
+            <th className="p-3 text-left">Camera Name</th>
+            <th className="p-3 text-left">Created</th>
             <th className="p-3 text-left">Action</th>
           </tr>
         </thead>
         <tbody>
           {displayItems.map((item, index) => (
             <tr key={index} className="odd:bg-gray-100 even:bg-white">
-              <td className="p-3">{item.camera_name}</td>
+              <td className="p-3">{item.id}</td>
+              <td className="p-3">{item.service_name}</td>
               <td className="p-3">{item.image_name}</td>
-              <td className="p-3">"testing"</td>
-              <td className="p-3">"testing"</td>
-              <td className="p-3">"testing"</td>
-              <td className="p-3">"testing"</td>
+              <td className="p-3">{item.camera_name}</td>
+              <td className="p-3">{item.created_at}</td>
               <td className="p-3">
                 <button
                   onClick={() => showDetails(item)}
@@ -124,4 +154,7 @@ const Events = () => {
   );
 };
 
-export default Events;
+export default FireEvent;
+
+
+
