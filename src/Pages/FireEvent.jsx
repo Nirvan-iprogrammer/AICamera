@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { useSelector } from 'react-redux';
 import Modal from '../Components/Modal';
 import { setItemSetting, setItemEvent } from '../utils/userSlice';
@@ -6,6 +6,8 @@ import { useDispatch } from 'react-redux';
 import LiveCam from '../Components/LiveCam';
 import { fireApi } from '../utils/Constants';
 import useFetch from "../hooks/fetch"
+import { ThemeContext } from '../context/themeContext';
+import useFetchData from '../hooks/fetch';
 
 
 
@@ -19,25 +21,25 @@ const FireEvent = () => {
 
   const dispatch = useDispatch();
 
-const {data} = useFetch(fireApi)
+
+const { data, loading, error } = useFetchData(fireApi)
+
+const { theme, setTheme } = useContext(ThemeContext);
+
+console.log("theme", theme)
 
 console.log("data", data)
 
   // Fetch Data from API
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(fireApi);
-        const json = await response.json();
-        dispatch(setItemEvent(json.events));
-        dispatch(setItemSetting(json.settings));
-        setfireEvents(json.events)
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-    fetchData();
-  }, []);
+    if (data) {
+      dispatch(setItemEvent(data.events));
+      dispatch(setItemSetting(data.settings));
+    }
+  }, [data, dispatch]);
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error}</p>;
 
   const cartItem = useSelector((store) => store.service.items);
 

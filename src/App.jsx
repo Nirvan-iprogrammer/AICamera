@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import SideNavBar from './Components/SideNavBar';
 import { ServiceCam } from './Pages/Services';
@@ -14,11 +14,18 @@ import Login from './Pages/Login';
 import Header from './Components/header';
 import axios from 'axios';
 import ProtectedRoute from './Components/protectedRoute';
+import { ThemeProvider } from './context/themeContext';
+
+
 
 
 function ProtectedLayout({ Component }) {
+
+  
+  
   return (
     <ProtectedRoute>
+      <ThemeProvider>
       <div className='flex h-full'>
         <SideNavBar />
         <div className='ml-[20px] p-[20px] w-full'>
@@ -26,7 +33,9 @@ function ProtectedLayout({ Component }) {
           <Component />
         </div>
       </div>
+      </ThemeProvider>
     </ProtectedRoute>
+   
   );
 }
 
