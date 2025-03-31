@@ -1,33 +1,33 @@
+
 import React, { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
-import Modal from './Modal';
+import Modal from '../Components/Modal';
 import { setItemSetting, setItemEvent } from '../utils/userSlice';
 import { useDispatch } from 'react-redux';
-import LiveCam from './LiveCam';
-import { fireApi } from '../utils/Constants';
+import LiveCam from '../Components/LiveCam';
+import useFetch from '../hooks/fetch'
+import { crowdApi } from '../utils/Constants';
 
 
-const FireEvent = () => {
+const Attendance = () => {
   const [page, setPage] = useState(1);
   const [noPerPage] = useState(5);
   const [isOpen, setIsOpen] = useState(false);
   const [modalData, setModalData] = useState("");
-  const [fireEvents, setfireEvents] = useState([]);
+  const [attendence, setAttendence] = useState([]);
 
 
   const dispatch = useDispatch();
-
 
 
   // Fetch Data from API
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(fireApi);
+        const response = await fetch(crowdApi);
         const json = await response.json();
         dispatch(setItemEvent(json.events));
         dispatch(setItemSetting(json.settings));
-        setfireEvents(json.events)
+        setAttendence(json.events)
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -35,14 +35,14 @@ const FireEvent = () => {
     fetchData();
   }, []);
 
-  const cartItem = useSelector((store) => store.service.items);
 
-  const noOfPage = Math.floor(fireEvents.length / noPerPage);
+
+  const noOfPage = Math.floor(attendence.length / noPerPage);
   const toDisplayPageNo = [...Array(noOfPage + 1).keys()].slice(1);
 
   const lastIndexPage = page * noPerPage;
   const firstIndexPage = lastIndexPage - noPerPage;
-  const displayItems = fireEvents.slice(firstIndexPage, lastIndexPage);
+  const displayItems = attendence.slice(firstIndexPage, lastIndexPage);
 
   const paginationForward = () => {
     if (page < noOfPage) setPage((p) => p + 1);
@@ -78,6 +78,7 @@ const FireEvent = () => {
         />
       </div>
 
+
       <table className="w-full border-collapse">
         <thead>
           <tr className="bg-gray-800 text-white">
@@ -112,8 +113,8 @@ const FireEvent = () => {
 
       {displayItems.length === 0 && (
         <div className="mt-8 text-center">
-          <p className="mb-4 text-gray-600">No Users Found! Add Users to start building the User List.</p>
-          <button className="px-4 py-2 text-white bg-green-600 rounded-lg hover:bg-green-700">+ Add User</button>
+          <p className="mb-4 text-gray-600">Add Users to start building the User List.</p>
+          <button className="px-4 py-2 text-white bg-green-600 rounded-lg hover:bg-green-700">+ Add Event</button>
         </div>
       )}
 
@@ -150,7 +151,5 @@ const FireEvent = () => {
   );
 };
 
-export default FireEvent;
-
-
+export default Attendance;
 
